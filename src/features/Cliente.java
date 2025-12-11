@@ -1,6 +1,18 @@
 package features;
 
+import java.util.List;
+
 public class Cliente {
+
+    String nombre;
+    String apellidos;
+    String NIF;
+    String direccion;
+    String localidad;
+    String provincia;
+    String telefono;
+    String email;
+     List<Factura> facturas;
 
     public String getNombre() {
         return nombre;
@@ -65,15 +77,5 @@ public class Cliente {
     public void setEmail(String email) {
         this.email = email;
     }
-
-    String nombre;
-    String apellidos;
-    String NIF;
-    String direccion;
-    String localidad;
-    String provincia;
-    String telefono;
-    String email;
-
 
 }
