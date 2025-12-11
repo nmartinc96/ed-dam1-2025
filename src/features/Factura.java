@@ -8,6 +8,14 @@ public class Factura {
     private String fecha;
     private String hora;
 
+    public Factura(int numeroFactura, String concepto, String precio, String fecha, String hora) {
+        this.numeroFactura = numeroFactura;
+        this.concepto = concepto;
+        this.precio = precio;
+        this.fecha = fecha;
+        this.hora = hora;
+    }
+
     public int getNumeroFactura() {
         return numeroFactura;
     }
