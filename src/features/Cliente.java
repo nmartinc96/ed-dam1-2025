@@ -4,15 +4,15 @@ import java.util.List;
 
 public class Cliente {
 
-    String nombre;
-    String apellidos;
-    String NIF;
-    String direccion;
-    String localidad;
-    String provincia;
-    String telefono;
-    String email;
-     List<Factura> facturas;
+    private String nombre;
+    private String apellidos;
+    private String NIF;
+    private String direccion;
+    private String localidad;
+    private String provincia;
+    private String telefono;
+    private String email;
+    private List<Factura> facturas;
 
     public String getNombre() {
         return nombre;
