@@ -2,11 +2,11 @@ package features;
 
 public class Factura {
 
-    int numeroFactura;
-    String concepto;
-    String precio;
-    String fecha;
-    String hora;
+    private int numeroFactura;
+    private String concepto;
+    private String precio;
+    private String fecha;
+    private String hora;
 
     public int getNumeroFactura() {
         return numeroFactura;
