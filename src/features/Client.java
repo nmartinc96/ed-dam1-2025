@@ -1,7 +1,6 @@
 package features;
 
 public class Client {
-    private int id;
     private String nombre;
     private String apellidos;
     private String nif;
@@ -11,10 +10,9 @@ public class Client {
     private String telefono;
     private String email;
 
-    public Client(int id, String nombre, String apellidos, String nif,
+    public Client(String nombre, String apellidos, String nif,
                   String direccion, String localidad, String provincia,
                   String telefono, String email) {
-        this.id = id;
         this.nombre = nombre;
         this.apellidos = apellidos;
         this.nif = nif;
@@ -23,12 +21,6 @@ public class Client {
         this.provincia = provincia;
         this.telefono = telefono;
         this.email = email;
-    }
-
-    // Getters y setters sencillos
-
-    public int getId() {
-        return id;
     }
 
     public String getNombre() {
@@ -98,9 +90,8 @@ public class Client {
     // Para imprimir el cliente de forma sencilla
     @Override
     public String toString() {
-        return "Cliente{" +
-                "id=" + id +
-                ", nombre='" + nombre + '\'' +
+        return "Cliente{"+
+                " nombre='" + nombre + '\'' +
                 ", apellidos='" + apellidos + '\'' +
                 ", nif='" + nif + '\'' +
                 ", direccion='" + direccion + '\'' +

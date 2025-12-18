@@ -1,9 +1,9 @@
 package repository;
 
 import features.Client;
-
-import java.util.Collection;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class ClientRepository {
@@ -11,10 +11,10 @@ public class ClientRepository {
     // Singleton
     private static ClientRepository instance;
 
-    private Map<Integer, Client> clientes;
+    private final Map<String, Client> clients;
 
     private ClientRepository() {
-        clientes = new HashMap<>();
+        clients = new HashMap<>();
     }
 
     public static ClientRepository getInstance() {
@@ -24,26 +24,25 @@ public class ClientRepository {
         return instance;
     }
 
-    // Operaciones CRUD básicas
+    // Basic CRUD
 
-    public void addCliente(Client client) {
-        clientes.put(client.getId(), client);
+    public void addClient(Client client) {
+        clients.put(client.getNif(), client);
     }
 
-    public Client getClienteById(int id) {
-        return clientes.get(id);
+    public Client getClientByNif(String nif) {
+        return clients.get(nif);
     }
 
-    public Collection<Client> getAllClientes() {
-        return clientes.values();
+    public List<Client> getAllClients() {
+        return new ArrayList<>(clients.values());
     }
 
-    public void deleteCliente(int id) {
-        clientes.remove(id);
+    public void deleteClient(String nif) {
+        clients.remove(nif);
     }
 
-    public void updateCliente(Client client) {
-        // Si ya existe, lo sustituimos. Si no existe, lo añadimos.
-        clientes.put(client.getId(), client);
+    public void updateClient(Client client) {
+        clients.put(client.getNif(), client);
     }
 }
