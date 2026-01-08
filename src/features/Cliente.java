@@ -14,6 +14,19 @@ public class Cliente {
     private String email;
     private List<Factura> facturas;
 
+    public Cliente(String nombre, String apellidos, String NIF, String direccion, String localidad, String provincia, String telefono, String email, List<Factura> facturas) {
+        this.nombre = nombre;
+        this.apellidos = apellidos;
+        this.NIF = NIF;
+        this.direccion = direccion;
+        this.localidad = localidad;
+        this.provincia = provincia;
+        this.telefono = telefono;
+        this.email = email;
+        this.facturas = facturas;
+    }
+
+
     public String getNombre() {
         return nombre;
     }
